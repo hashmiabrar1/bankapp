@@ -1,0 +1,47 @@
+<!-- <app-dashboard></app-dashboard> -->
+<div align='center'>
+    <h1>Customer List</h1>
+</div>
+<div class = container>
+    <ul *ngFor = 'let customer of customerList'>
+        <li class = 'form-control' class = 'card card-container' >
+                <table>
+                        <tr>
+                          <td>Username: </td><td><input type='text' class='form-control' name='username' defaultValue = '{{customer.username}}' [(ngModel)] = 'customer.username'></td>
+                        </tr>
+                        <tr>
+                          <td>Name: </td><td><input type='text' class='form-control' name='name' defaultValue = '{{customer.name}}' [(ngModel)] = 'customer.name'></td>
+                        </tr>
+                        <tr>
+                          <td>Address: </td><td><input type='text' class='form-control' name='address' defaultValue = '{{customer.address}}' [(ngModel)] = 'customer.address'></td>
+                        </tr>
+                        <tr>
+                          <td>Email: </td><td><input type='text' class='form-control' name='email' defaultValue = '{{customer.email}}' [(ngModel)] = 'customer.email'></td>
+                        </tr>
+                        <tr>
+                          <td>Phone No: </td><td><input type='text' class='form-control' name='pno' defaultValue = '{{customer.pno}}' [(ngModel)] = 'customer.pno'></td>
+                        </tr>
+                        <tr>
+                          <td>Occupation: </td><td><input type='text' class='form-control' name='occupation' defaultValue = '{{customer.occupation}}' [(ngModel)] = 'customer.occupation'></td>
+                          <!-- <td>{{customer.username}}</td><td><input type = 'text' defaultValue = '{{customer.username}}' [(ngModel)] = ''></td> -->
+                        </tr>
+                      </table>
+                        <br>
+                        
+            <tr>
+            <td><button class="btn btn-lg btn-secondary btn-block btn-signin" class='form-control' (click)='onUpdate(customer)'>Update</button></td>
+            <td><button class="btn btn-lg btn-secondary btn-block btn-signin" class='form-control' (click)='onDelete(customer)'>Delete</button></td>
+            <td><button class="btn btn-lg btn-secondary btn-block btn-signin" class='form-control' (click)='redirectToAccounts(customer)'>AccountsList</button></td>
+            </tr>
+        </li>
+    </ul>
+</div>
+
+<!-- <app-empdetails [emp] = 'selectedEmp'></app-empdetails> -->
+
+<!-- <mat-list role="list" *ngFor = 'let customer of customerlist' class = 'list-group'>
+    <mat-list-item role = 'listitem' class = 'list-group-item'></mat-list-item>
+    <mat-list-item role="listitem" class= 'list-group-item' (click) = 'onClick(customer)'>
+      {{"Username: " + customer.username + 'Name: ' + customer.name}}
+    </mat-list-item>
+</mat-list> -->

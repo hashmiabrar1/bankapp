@@ -1,0 +1,9 @@
+[
+    {"ano":1, "balance":1234, "atype":"savings", "uid":1},
+    {"ano":2, "balance":1234, "atype":"savings", "uid":2},
+    {"ano":3, "balance":1234, "atype":"savings", "uid":2},
+    {"ano":4, "balance":1234, "atype":"savings", "uid":3},
+    {"ano":5, "balance":1234, "atype":"savings", "uid":3},
+    {"ano":6, "balance":1234, "atype":"savings", "uid":4},
+    {"ano":7, "balance":1234, "atype":"savings", "uid":5}   
+]

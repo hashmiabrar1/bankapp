@@ -1,0 +1,61 @@
+<!-- <br> -->
+<div align='center'>
+    <h1>Accounts List</h1>
+</div>
+<!-- <br> -->
+<div class='container' align='center'>
+    <ul *ngFor = 'let account of accountsList' class='card card-container'>
+        
+          <!-- <table class = "container"> -->
+            <!-- <span>{{'Account Number: ' + account.ano }}</span>
+            <span>
+              <button class="btn btn-lg btn-secondary btn-block btn-signin" (click)='onUpdate()'>Update</button>
+              <button class="btn btn-lg btn-secondary btn-block btn-signin" (click)='onDelete()'>Delete</button>
+            </span> -->
+            
+              <!-- <div class='container'> -->
+                <!-- <div class='card-container'> -->
+                    <!-- <img id="profile-img" class="profile-img-card" src="assets/images/avatar_2x.png" /> -->
+                    <table>
+                        <tr>
+                          <td>Account Number : </td><td><input type='text' class='form-control' name='ano' defaultValue = '{{account.ano}}' [(ngModel)] = 'account.ano' readonly></td>
+                        </tr>
+                        <tr>
+                          <td>Balance : </td><td><input type='text' class='form-control' name='balance' defaultValue = '{{account.balance}}' [(ngModel)] = 'account.balance' readonly></td>
+                        </tr>
+                        <tr>
+                          <td>Account Type : </td><td><input type='text' class='form-control' name='atype' defaultValue = '{{account.atype}}' [(ngModel)] = 'account.atype'></td>
+                        </tr>
+                        <tr>
+                          <td>Customer Id : </td><td><input type='text' class='form-control' name='selectedId' defaultValue = '{{selectedId}}' [(ngModel)] = 'selectedId' readonly></td>
+                        </tr>
+                      </table>
+                        <br>
+                        <table>
+                        <tr>
+                          <td><button class="btn btn-lg btn-primary btn-block btn-signin" class='form-control' (click)='onUpdate(account)'>Update</button></td>
+                          <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                          <td><button class="btn btn-lg btn-secondary btn-block btn-signin" class='form-control' (click)='onDelete(account)'>Delete</button></td> 
+                        </tr>
+                        </table>
+                <!-- </div> -->
+              <!-- </div> -->
+              <!-- <td><button class="btn btn-lg btn-secondary btn-block btn-signin" (click)='onUpdate()'>Update</button></td><td></td>
+              <td><button class="btn btn-lg btn-secondary btn-block btn-signin" (click)='onDelete()'>Delete</button></td> -->
+            
+            <!-- <tr>hi</tr> -->
+          <!-- </table> -->
+    </ul>
+    <div class = 'card card-container'>
+        <p>Select Account Type:</p>
+        <select class = 'form-control' name = 'atype' [(ngModel)] = 'atype' placeholder="Select Account Type:">
+            <option value="Savings Account">Savings Account</option>
+            <option value="Current Account">Current Account</option>
+            <option value="Fixed Deposit Account">Fixed Deposit Account</option>
+            <option value="Recurrent Deposit Account">Recurrent Deposit Account</option>
+        </select><pre>
+        </pre>
+      <button class="btn btn-lg btn-secondary btn-block btn-signin" class='form-control' (click)='addAccount()'>Add Account</button>
+    </div>
+    
+</div>

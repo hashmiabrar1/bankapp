@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="card card-container">
+    <form method = 'POST' (ngSubmit)='onSubmit()' >
+    <img id="profile-img" class="profile-img-card" src="assets/images/avatar_2x.png" />
+      
+      <table>
+        <tr>
+          <td>Username: </td><td><input type='text' class='form-control' name='username' defaultValue = '{{customer.username}}' [(ngModel)] = 'customer.username'></td>
+        </tr>
+        <tr>
+          <td>Name: </td><td><input type='text' class='form-control' name='name' defaultValue = '{{customer.name}}' [(ngModel)] = 'customer.name'></td>
+        </tr>
+        <tr>
+          <td>Address: </td><td><input type='text' class='form-control' name='address' defaultValue = '{{customer.address}}' [(ngModel)] = 'customer.address'></td>
+        </tr>
+        <tr>
+          <td>Email: </td><td><input type='text' class='form-control' name='email' defaultValue = '{{customer.email}}' [(ngModel)] = 'customer.email'></td>
+        </tr>
+        <tr>
+          <td>Phone No: </td><td><input type='text' class='form-control' name='phoneNo' defaultValue = '{{customer.phoneNo}}' [(ngModel)] = 'customer.phoneNo'></td>
+        </tr>
+        <tr>
+          <td>Occupation: </td><td><input type='text' class='form-control' name='occupation' defaultValue = '{{customer.occupation}}' [(ngModel)] = 'customer.occupation'></td>
+          <!-- <td>{{customer.username}}</td><td><input type = 'text' defaultValue = '{{customer.username}}' [(ngModel)] = ''></td> -->
+        </tr>
+      </table>
+        <br>
+        <table>
+        <tr>
+          <td><button class="btn btn-lg btn-primary btn-block btn-signin" class='form-control' (click)='onUpdate()'>Update</button></td>
+          <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          <td><button class="btn btn-lg btn-secondary btn-block btn-signin" class='form-control' (click)='onDelete()'>Delete</button></td> 
+        </tr>
+        </table>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="card card-container">
+    <form method = 'POST' (ngSubmit)='onSubmit()' >
+    <img id="profile-img" class="profile-img-card" src="assets/images/avatar_2x.png" />
+      
+      <table>
+        <tr>
+          <td>Username:</td>
+          <td>{{selectedCustomer.username}} </td>
+        </tr>
+        <tr>
+          <td>Name:</td>
+          <td>{{selectedCustomer.name}} </td>
+        </tr>
+        <tr>
+          <td>Address:</td>
+          <td>{{selectedCustomer.address}} </td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td>{{selectedCustomer.email}} </td>
+        </tr>
+        <tr>
+          <td>Address:</td>
+          <td>{{selectedCustomer.address}} </td>
+        </tr>
+        <tr>
+          <td>Occupation:</td>
+          <td>{{selectedCustomer.occupation}}</td>
+          <!-- <td>{{customer.username}}</td><td><input type = 'text' defaultValue = '{{customer.username}}' [(ngModel)] = ''></td> -->
+        </tr>
+      </table>
+        <br>
+        <table>
+        <tr>
+          <td><button class="btn btn-lg btn-primary btn-block btn-signin" class='form-control' (click)='onAccept()'>Accept</button></td>
+          <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          <td><button class="btn btn-lg btn-secondary btn-block btn-signin" class='form-control' (click)='onReject()'>Reject</button></td> 
+        </tr>
+        </table>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a class="navbar-brand text-white" [routerLink]="['/login']">Online Banking</a>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item " >
+        <a class="nav-link" [routerLink]="['/user/',uid]">Home </a>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['/transfer/',uid]">Funds Transfer</a>
+      </li>
+      <li class="nav-item active" [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['/statement/',uid]">Transaction Statement</a>
+      </li>
+    
+    </ul>
+
+  </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+          <div class="card card-container">
+            <h3>Mini Statement</h3>
+            <form method="GET" #userlogin = "ngForm" (ngSubmit)="onSubmit(userlogin.value)">
+              <span>Account no: </span>
+              <input type="text" name="fromacc" ngModel>
+              <br><br>
+              <button  class="button" type="submit">Get Mini-Statement</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-sm">
+            <div class="card card-container">
+              <form method="GET" #userlogins = "ngForm" (ngSubmit)="onSubmitDate(userlogins.value)">
+                <span>Account no: </span>
+              <input type="text" name="fromacc" ngModel>
+              <br><br>
+                
+                <span>From Date: </span>
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker1" placeholder="Choose a date" name="datefrom" ngModel>
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                  </mat-form-field>
+                  <br>
+                  <br>
+                <span>To Date: </span><br>
+                  <mat-form-field>
+                      <input matInput [matDatepicker]="picker2" placeholder="Choose a date" name="dateto" ngModel>
+                      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                      <mat-datepicker #picker2></mat-datepicker>
+                    </mat-form-field>
+                <br><br>
+                <button  class="button" type="submit">Get Statement</button>
+              </form>
+            </div>
+          </div>
+
+      </div>
+
+  <div class="container">
+      <p>{{message}}</p>
+          <table border="1px" cellspacing="10" >
+                  <tr align="center">
+                    <th>
+                      Transaction ID
+                  </th>
+                  <th>
+                    Debit Account
+                  </th>
+                  <th>
+                    Credit Account
+                  </th>
+                  <th>
+                      Amount
+                        </th>
+                  <th>
+                    Debit Account Balance
+                    </th>
+                    <th>
+                     Credit Account Balance
+                      </th>
+                      
+                        <th>
+                      Date
+                          </th>
+                          <th>
+                              Time
+                                  </th>
+                  </tr>
+                  <tr *ngFor = 'let t of tr' align="center">
+                    <td>
+                      {{t.tid}}
+                    </td>
+                    <td>
+                      {{t.fromacc}}
+                    </td>
+                    <td>
+                      {{t.toacc}}
+                    </td>
+                    <td>
+                        {{t.amount}}
+                      </td>
+                    <td>
+                        {{t.frombal}}
+                      </td>
+                      <td>
+                          {{t.tobal}}
+                        </td>
+                      
+                          <td>
+                              {{t.ts.slice(0,10)}}
+                            </td>
+                            <td>
+                                {{t.ts.slice(11,19)}}
+                              </td>
+                  </tr>
+                </table>
+        </div>
+<br>
+<br>
+</div>

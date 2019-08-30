@@ -1,0 +1,45 @@
+<!-- <app-dashboard></app-dashboard> -->
+<div align='center'>
+        <h1>Customer Requests</h1>
+</div>
+<div class = container>
+    <ul *ngFor = 'let customer of customerList'>
+        <li class = 'form-control' class = 'card card-container' >
+            <span>{{customer.username + " " + customer.name}}</span>
+            <tr>
+            <td><button class="btn btn-lg btn-secondary btn-block btn-signin" class='form-control' (click)='onAccept(customer)'>Accept</button></td><br>
+            <td><button class="btn btn-lg btn-secondary btn-block btn-signin" class='form-control' (click)='onReject(customer)'>Reject</button></td>
+            </tr>
+        </li>
+    </ul>
+</div>
+
+    <!-- <br>
+    <div align='center'>
+        <h1>Customer List</h1>
+    </div>
+    <br>
+    <div class = 'container'>
+        <ul *ngFor = 'let customer of customerList' class = 'form-control'>
+            <li (click) = 'onClick(customer)'>
+                <table>
+                    <tr>
+                        <td><span>{{customer.username + " " + customer.name}}</span></td>
+                        <td><button (click)='onAccept(customer)'>Accept</button></td>
+                        <td><button class="btn btn-lg btn-secondary btn-block btn-signin" (click)='onReject(customer)'>Reject</button></td>
+                    </tr>
+                </table>
+                <span>{{customer.username + " " + customer.name}}</span>
+                <button class="btn btn-lg btn-secondary btn-block btn-signin" class='form-control' (click)='onAccept(customer)'>Accept</button>
+                <button class="btn btn-lg btn-secondary btn-block btn-signin" class='form-control' (click)='onReject(customer)'>Reject</button>
+            </li>
+        </ul>
+    </div>     -->
+    <!-- <app-empdetails [emp] = 'selectedEmp'></app-empdetails> -->
+    
+    <!-- <mat-list role="list" *ngFor = 'let customer of customerlist' class = 'list-group'>
+        <mat-list-item role = 'listitem' class = 'list-group-item'></mat-list-item>
+        <mat-list-item role="listitem" class= 'list-group-item' (click) = 'onClick(customer)'>
+          {{"Username: " + customer.username + 'Name: ' + customer.name}}
+        </mat-list-item>
+    </mat-list> -->

@@ -1,0 +1,7 @@
+[
+    {"uid": 1, "username":"faraaz", "password":"pass", "name": "hyderabad","address": "59000", "email": "faraz@gmail", "phoneNo": "1234", "occupation": "dev" },
+    {"uid": 2, "username":"aaqil", "password":"Faraaz", "name": "hyderabad","address": "59000", "email": "faraz@gmail", "phoneNo": "1234", "occupation": "dev" },
+    {"uid": 3, "username":"saif", "password":"Faraaz", "name": "hyderabad","address": "59000", "email": "faraz@gmail", "phoneNo": "1234", "occupation": "dev" },
+    {"uid": 4, "username":"abrar", "password":"Faraaz", "name": "hyderabad","address": "59000", "email": "faraz@gmail", "phoneNo": "1234", "occupation": "dev" },
+    {"uid": 5, "username":"vamsi", "password":"Faraaz", "name": "hyderabad","address": "59000", "email": "faraz@gmail", "phoneNo": "1234", "occupation": "dev" }
+]
